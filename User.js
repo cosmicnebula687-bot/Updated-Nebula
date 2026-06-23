@@ -22,6 +22,7 @@ const userSchema = new mongoose.Schema({
   begCooldown: { type: Number, default: 0 },
   robCooldown: { type: Number, default: 0 },
   duelCooldown: { type: Number, default: 0 },
+  spaceExpeditionCooldown: { type: Number, default: 0 },
   gamblingStats: {
     totalWon: { type: Number, default: 0 },
     totalLost: { type: Number, default: 0 },
