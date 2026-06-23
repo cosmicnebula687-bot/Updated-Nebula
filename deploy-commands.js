@@ -36,17 +36,16 @@ const rest = new REST({ version: '10' })
 
 (async () => {
   try {
-    console.log(`🚀 Deploying ${commands.length} slash commands...`);
+    console.log(`🚀 Deploying ${commands.length} slash commands globally...`);
 
     const data = await rest.put(
-      Routes.applicationGuildCommands(
-        process.env.CLIENT_ID,
-        process.env.GUILD_ID
+      Routes.applicationCommands(
+        process.env.CLIENT_ID
       ),
       { body: commands }
     );
 
-    console.log(`✅ Successfully deployed ${data.length} commands!`);
+    console.log(`✅ Successfully deployed ${data.length} commands globally!`);
     console.log(
       'Commands:',
       data.map(cmd => `/${cmd.name}`).join(', ')
