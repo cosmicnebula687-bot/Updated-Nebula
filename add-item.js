@@ -33,7 +33,7 @@ module.exports = {
         .setMinValue(1)
         .setRequired(false)
     )
-    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
+    .setDefaultMemberPermissions(PermissionFlagsBits.Connect),
 
   cooldown: 3,
 
