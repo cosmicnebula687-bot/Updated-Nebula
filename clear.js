@@ -5,7 +5,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName('clear')
     .setDescription('🧹 Clear messages from a channel')
-    .addIntegerOption(opt => opt.setName('amount').setDescription('Number of messages to delete (1-100)').setRequired(true).setMinValue(1).setMaxValue(100))
+    .addIntegerOption(opt => opt.setName('amount').setDescription('Number of messages to delete (1-1000)').setRequired(true).setMinValue(1).setMaxValue(1000))
     .addUserOption(opt => opt.setName('user').setDescription('Clear messages from a specific user').setRequired(false))
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages),
   cooldown: 5,
